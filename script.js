@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mensagem real que será decodificada
     const realMessage = "Conexão estabelecida...\n\nCódigo binário decodificado:\n01000101 01101110 01100011 01101111 01101110 01110100 01110010 01100001 01100100 01101111 00100000 01100001 00100000 01101101 01100101 01101110 01110011 01100001 01100111 01100101 01101101...\n\n" +
-                        "Aniversário, do meu Amor!\n\n" +
-                        "Sistema operacional... pronto! ( Com muito carinho e amor )";
+                        "Feliz Aniversario Marisa Di Bonito, do meu Amor!\n\n" +
+                        "Sistema operacional... pronto! ( Com muito carinho e muitoooooooo amor )";
 
     const randomChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}|:<>?`~";
 
@@ -71,4 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
             decodeText(realMessage, 30);
         }
     });
+
 });
