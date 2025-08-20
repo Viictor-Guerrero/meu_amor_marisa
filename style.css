@@ -1,0 +1,103 @@
+body {
+    background-color: #0d1117;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.terminal-screen {
+    width: 90vw;
+    height: 90vh;
+    border: 2px solid #00ff41;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0 10px #00ff41, inset 0 0 10px #00ff41;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.initial-text {
+    animation: blink-text 1s infinite;
+    font-size: 2vh;
+}
+
+.code-area {
+    white-space: pre-wrap;
+    font-size: calc(1.5vh + 0.5vw);
+    line-height: 1.4;
+    user-select: none;
+    opacity: 0;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: #00ff41;
+    width: 10px;
+    height: 1.2em;
+    margin-left: 5px;
+    animation: blink-cursor 1s infinite;
+}
+
+.revealed-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    text-align: center;
+    width: 100%;
+}
+
+.photo-carousel {
+    position: relative;
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    border: 1px solid #00ff41;
+    box-shadow: 0 0 50px #00ff41;
+    margin: 0 auto 40px;
+    overflow: hidden;
+}
+
+.photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.photo.active {
+    opacity: 1;
+}
+
+.message-container h1 {
+    font-size: calc(2.5vh + 1vw);
+    color: #faf4f7;
+    margin-bottom: 10px;
+}
+
+.message-container p {
+    font-size: calc(1.5vh + 0.5vw);
+}
+
+@keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes blink-text {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
